@@ -1,0 +1,47 @@
+// Array of special characters to be included in password
+var specialCharacters = [];
+// Array of numeric characters to be included in password
+var numericCharacters = [];
+// Array of lowercase characters to be included in password
+var lowerCasedCharacters = [];
+// Array of uppercase characters to be included in password
+var upperCasedCharacters = [];
+
+
+
+var passwordLength;
+var charset = "";
+
+
+Step one : We have a function to prompt user for password options 
+//1st we let the user insert the length of the password save to var passwordLength
+// make sure to loop the user if they didnt insert length b/w 8 up to 128
+// valadiate for each input of character (lowercase uppercase numeric n special character)the user wants by using conform()
+// we created a set of character to save the characted that user wants to include , 
+//if yes they will be join into the empty string called charset , if not then no
+
+
+Step two: We create a Function for getting a random element from the chareset
+//we pass in charset to the function as param 
+//We created a var that will select a random number which we can use as an index 
+//this function will return a random character from the charset 
+
+
+Step three:  Function to generate password with user input
+//1st we create an empty string to hold the generated password
+//2nd we enter a loop until we get the password length requested by the users 
+//this loop will call the getrandom function and the character that will be selected will get concated into the empty string password
+// we created a var called passwordtext to target an HTML element with the ID "password" using the querySelector() method provided by DOM
+//then we target the passwordtext value to be the value of the variable password.
+
+// Get references to the #generate element by targeting the DOM
+var generateBtn = document.querySelector('#generate');
+
+// Write password to the #password input
+function writePassword() {
+  getPasswordOptions(); // Retrieve password options before generating
+
+}
+
+we Add event listener to generate button
+generateBtn.addEventListener('click', writePassword);
